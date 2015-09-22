@@ -31,7 +31,9 @@ class JiraAPI(object):
         return '/'.join((self.url, url))
 
     def send_request(self, url=None, method=None, headers=None, data=None, auth=None):
-        '''Send request and logging the response. Returns Response Object'''
+        '''Send request and logging the response. 
+        :return: Response Object
+        '''
         url = self.prepare_url(url)
         LOGGER.info('Request url: %s', url)
         LOGGER.info('Request data: %s', data)
